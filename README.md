@@ -2,6 +2,7 @@
 Physics simulation for MESA engineering
 
 VERSION 1.0
+
 There's no UI for changing variables, so changes have to be done directly in the code.
 
 Changing num_of_objs (currently line 85 of main.py) could result in an error due to 
