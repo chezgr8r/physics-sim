@@ -1,0 +1,37 @@
+    # Old system
+    # for n in range(len(objects)):
+    #     num_in_list = n + 1
+    #     while num_in_list < len(objects):
+    #         if abs(objects[n].position.x - objects[num_in_list].position.x) < objects[n].shape.radius + objects[num_in_list].shape.radius:
+    #             if abs(objects[n].position.y - objects[num_in_list].position.y) < objects[n].shape.radius + objects[num_in_list].shape.radius:
+    #                 collisions.append(Vector2(n, num_in_list))
+    #         num_in_list = num_in_list + 1
+    # return collisions
+
+                # Old code
+                # p = cr1 + cr2 - math.sqrt(dist2)
+                # rdist1 = cr1 - p # Only true if radius' are equal
+                # rdist2 = cr2 - p # Only true if radius' are equal
+                # if cx1 == cx2:
+                #     angle = math.pi / 2
+                # else:
+                #     angle = math.atan2((cy1 - cy2), (cx1 - cx2))
+                # Ax = rdist1 * math.cos(angle)
+                # Ay = rdist1 * math.sin(angle)
+                # Bx = rdist2 * math.cos(angle)
+                # By = rdist2 * math.sin(angle)
+
+# # Calculation functions
+# def calculate_box_inertia(boxShape):
+#     m = boxShape.mass
+#     w = boxShape.width
+#     h = boxShape.height
+#     boxShape.momentOfInertia = m * (w * w + h * h) / 12
+
+        # WHAT TO FIX:
+        # Circles get stuck to ceiling
+        # Circles don't bounce off bottom or top
+        # Impulse goes crazy if circles spawn on each other
+        # Fails if circles inside of each other
+        # Too much velocity when circles touch in x direction
+
