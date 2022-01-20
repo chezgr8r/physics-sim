@@ -116,12 +116,12 @@ def main():
         # Erase object, calculate movement, redraw object in new position
         for n in range(len(objects)):
             pygame.draw.circle(screen, (back_color.x, back_color.y, back_color.z),
-                               (objects[n].position.x, objects[n].position.y), objects[n].shape.radius)
+                            (int(objects[n].position.x), int(objects[n].position.y)), int(objects[n].shape.radius))
         move_step(dt, objects, gravity, screen_d)
 
         for n in range(len(objects)):
-            pygame.draw.circle(screen, (n * 10, 0, 0), (objects[n].position.x, objects[n].position.y),
-                               objects[n].shape.radius)
+            pygame.draw.circle(screen, (n * 10, 0, 0),
+                            (int(objects[n].position.x), int(objects[n].position.y)), int(objects[n].shape.radius))
 
         for i in range(len(circle_collision)):
             obx = objects[int(circle_collision[i].which_circs.x)]
